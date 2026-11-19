@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills Test - Element Checker</title>
+
+    <!-- Cabading, Jan | 10S -->
+     <!-- NOTE: REUSED SKILLS TEST CODE, ONLY CHANGED THE TEMPLATE-->
+    <!-- pyscript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css"/>
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <style>
+        body {
+            background-color: #f8f7f4;
+            color: #222;
+            min-height: 100vh;
+        }
+        .navbar {
+            background-color: white;
+            border-bottom: 1px solid #ddd;
+            border-radius: 0px 0px 6px 6px;
+            padding: 12px 24px;
+            width: 100%;
+        }
+        .navbar-brand {
+            color: #222;
+            font-size: 16px;
+        }
+        .nav-link {
+            color: #4a4949;
+            font-size: 15px;
+            padding: 6px 14px;
+            border-radius: 6px;
+        }
+        .nav-link:hover {
+            color: white;
+            background-color: #5c7c64;
+        }
+        .nav-link.active {
+            color: white;
+            background-color: #5c7c64;
+            font-weight: bold;
+        }
+
+        .main-box {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            max-width: 480px;
+            width: 100%;
+        }
+        .btn-main {
+            background-color: #2c3e50;
+            color: white;
+        }
+        .btn-main:hover {
+            background-color: #1a252f;
+            color: white;
+        }
+        .sub-box {
+            background-color: #f8f7f4;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column">
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                Jan Cabading | 10S
+            </a>
+
+            <div class="navbar-nav ms-auto gap-2">
+                <a href="index.html" class="nav-link">SW1</a>
+                <a href="Skillstest.html" class="nav-link active">Skills Test</a>
+                <a href="drill2.html" class="nav-link">Drill 2</a>
+                <a href="creator.html" class="nav-link">Meet the Creator</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Skills Test -->
+    <div class="flex-grow-1 d-flex align-items-center justify-content-center p-3">
+        <div class="main-box p-4 text-center">
+            <h3 class="fw-bold mb-1">Non-Metal Elements</h3>
+            <p class="text-muted small mb-4">Periodic Table Information Finder</p>
+
+            <!-- the instruction box -->
+            <div class="sub-box p-3 text-start mb-3 small">
+                <p class="mb-0">
+                    <strong>Instructions:</strong><br>
+                    Enter a <strong>symbol</strong> of a non-metal element (Ex: At, O, H, C).<br>
+                    <strong>Note:</strong> This is not case sensitive.
+                </p>
+            </div>
+
+            <!-- Input Field -->
+            <div class="text-start mb-3">
+                <label for="symbolInput" class="form-label small fw-bold">Element Symbol</label>
+                <input type="text" id="symbolInput" class="form-control" placeholder="Enter a non-metal symbol...">
+            </div>
+
+            <!-- action button -->
+            <button py-click="search_element" class="btn btn-main w-100 py-2 mb-4 fw-bold">Check Details</button>
+
+            <!-- result header -->
+            <div class="text-start mb-2">
+                <h6 class="fw-bold mb-0">Result</h6>
+            </div>
+
+            <!-- result display box -->
+            <div class="sub-box p-3 text-start small">
+                <p class="mb-1"><strong>Symbol:</strong> <span id="displaySymbol" class="fw-bold">-</span></p>
+                <p class="mb-1"><strong>Element:</strong> <span id="displayName">-</span></p>
+                <p class="mb-1"><strong>Atomic Number:</strong> <span id="displayNumber">-</span></p>
+                <p class="mb-0"><strong>Atomic Mass:</strong> <span id="displayMass">-</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- to pyscript -->
+    <script type="py" src="skillstest.py"></script>
+</body>
+</html>
