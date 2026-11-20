@@ -16,7 +16,7 @@ sports = {"Volleyball", "Basketball"}
 subjects = {"Philosophy", "Theology"}
 likes = sports.union(subjects)
 
-# put bold
+# add bold using f string
 info = f"""
 <p class="mb-2"><strong>Name:</strong> {name}</p>
 <p class="mb-2"><strong>Grade & Section:</strong> {section}</p>
